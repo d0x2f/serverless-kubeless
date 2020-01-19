@@ -170,6 +170,8 @@ class KubelessDeploy {
         log: this.serverless.cli.log.bind(this.serverless.cli),
         timeout: this.serverless.service.provider.timeout,
         environment: this.serverless.service.provider.environment,
+        retryLimit: kubelessConfig.deploymentRetryLimit,
+        retryInterval: kubelessConfig.deploymentRetryInterval
       }
     ));
   }
